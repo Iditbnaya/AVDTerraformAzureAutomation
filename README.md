@@ -3,7 +3,7 @@ Creating a non-persistent AVD environment by Creating and deleting the env every
 
 
 Steps: 
-#############################################################################################
+####################################################################################
 1. Create a resource group 
 2. Create a VNet
 3. Create a golden Image (If needed) 
@@ -24,13 +24,14 @@ Save the resoult
   "tenant": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 }
 
-5. Create Key vault - if already created give permissions to the service principal on the keyvaoult  - under access configuration create access policy 
+5. Create Key vault - if already created give permissions to the service principal on the key vault  - under access configuration create access policy 
 6. Give Permissions to the Service principal to manage the AD groups: Add the SP to Groups Administrator role 
 7. Create two secrets in the key vault One for the local admin --> "DefaultAdminUser" and one for the password "DefaultAdminPasword"
 8. Edit the Terraform Varaiables File
 
 
 For the Hybrid worker: 
+
 10.Create a Linux VM  (I Used Ubuntu)
 11. Connect to the VM and Install Terraform - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli 
 12. Install PowerShell
@@ -39,14 +40,13 @@ sudo apt-get install -y powershell
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 14. Create a folder for the Terraform Files
 15. Copy the files to the folder (I used winscp)
-16. From the folder with the tf files Run terraform init
-
-
+16. From the folder with the tf files Run:
+terraform init
 
 For the automation: 
-17. In azure portal create anew automation account
-18. Create an Hybrid worker group anfd add the Linux vm
-19.Create a PowerShell Runbook for Deploy 
+17. In azure portal create a new automation account
+18. Create an Hybrid worker group and add the Linux VM
+19.Create a PowerShell Runbook for the AVD Deployment:
 
 
 #Login with the service principle
@@ -59,7 +59,8 @@ terraform apply main.destroy.tfplan
 
 20. Start the runbook and check that everything worked
 
-21.Create a PowerShell Runbook for Destroy the AVD Env 
+21.Create a PowerShell Runbook for Destroying the AVD Env 
+
 #Login with the service principle
 az login --service-principal -u 'XXXXXXXXXXXXXXXXXXXXXXXXXX' -p 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' --tenant 'XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
 #Change the path to where the tf files are
@@ -68,13 +69,12 @@ terraform plan -destroy -out main.destroy.tfplan
 terraform apply main.destroy.tfplan![image](https://user-images.githubusercontent.com/47793710/224740837-fcb63e10-a00d-481b-9f33-7b6b5f8066a3.png)
 
 
-
 22. Start the runbook and check that the AVD env Deleted 
 
 
 Now schedule the deploy and destroy run books 
 
-Good luck 
+Good luck :)
 
 
 
