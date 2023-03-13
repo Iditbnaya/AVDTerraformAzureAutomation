@@ -1,5 +1,5 @@
 # AVDTerraformAzureAutomation
-Creating a non-persistent AVD environment by Creating and deleting the env every day using Terraform and Azure automation
+Creating a non-persistent AVD environment by deploying and deleting the env every day using Terraform and Azure automation
 
 
 Steps: 
