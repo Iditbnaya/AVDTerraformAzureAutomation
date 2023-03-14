@@ -3,6 +3,7 @@ Creating a non-persistent AVD environment by deploying and deleting the env ever
 
 
 Steps: 
+
 ####################################################################################
 1. Create a resource group 
 2. Create a VNet
