@@ -13,6 +13,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/generalize
 4. Create a Service principal  and copy the result - choose the level of permissions (subscription or resource group/ Owner or Contributor)
 
 Examples: 
+
 az ad sp create-for-rbac --name terraformtest --role Contributor --scopes /subscriptions/<SubID>
   
 az ad sp create-for-rbac --name SPAVDTF --role Contributor --scopes /subscriptions/<SubID>/resourcegroups/<RGname>
