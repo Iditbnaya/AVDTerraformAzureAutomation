@@ -47,8 +47,15 @@ For the Hybrid worker:
 sudo apt-get install -y powershell
   
 13. Install az cli
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-  
+
+• apt install curl -y
+
+• curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+• apt-get update
+
+apt-get install azure-cli![image](https://user-images.githubusercontent.com/47793710/227123640-2e55b3e0-1851-4789-825d-9bb7e3fb40cc.png)
+
 14. Create a folder for the Terraform Files
   
 15. Copy the files to the folder (I used winscp)
