@@ -7,7 +7,7 @@ variable "rg_name" {
 
 variable "rg_id" {
   type        = string
-  default     = "/subscriptions/1235b70df-2c34-4af1-5678-ddbcc9f05dc4/resourceGroups/RG-TFAVD"
+  default     = "/subscriptions/123456789-2c34-4af1-5678-ddbcc9f05dc4/resourceGroups/RG-TFAVD"
   description = "Location of the Resource group in which to deploy service objects"
 }
 
@@ -19,7 +19,7 @@ variable "vnet_name" {
   
 variable "subnet_id" {
   type        = string
-  default     = "/subscriptions/1235b70df-2c34-4af1-5678-ddbcc9f05dc4/resourceGroups/RG-TFAVD/providers/Microsoft.Network/virtualNetworks/Vnet-TFAVD/subnets/AVD"
+  default     = "/subscriptions/123456789-2c34-4af1-5678-ddbcc9f05dc4/resourceGroups/RG-TFAVD/providers/Microsoft.Network/virtualNetworks/Vnet-TFAVD/subnets/AVD"
   description = "ID of the subnet in which to deploy service objects"
 }
 
@@ -59,7 +59,7 @@ variable "aad_group_name" {
 
 variable "Image_ID" {
   type        = string
-  default     = "/subscriptions/1235b70df-2c34-4af1-5678-ddbcc9f05dc4/resourceGroups/AVD-RG/providers/Microsoft.Compute/images/Elbit-GoldenImage-image-test-2603"
+  default     = "/subscriptions/123456789-2c34-4af1-5678-ddbcc9f05dc4/resourceGroups/AVD-RG/providers/Microsoft.Compute/images/Elbit-GoldenImage-image-test-2603"
   description = "Resource ID of the VM image version from the gallery"
 }
 
@@ -77,8 +77,8 @@ variable "vm_size" {
 
 variable "kvId" {
   type = string
-  description = "f2362ed5-659f-4972-9edd-0a91ea152345"
-  default = "/subscriptions/1235b70df-2c34-4af1-5678-ddbcc9f05dc4/resourceGroups/KeyVaultRG/providers/Microsoft.KeyVault/vaults/Idit-Keyvault"
+  description = "Key Voult"
+  default = "/subscriptions/123456789-2c34-4af1-5678-ddbcc9f05dc4/resourceGroups/KeyVaultRG/providers/Microsoft.KeyVault/vaults/Idit-Keyvault"
 }
 
 variable "userNameSecret" {
